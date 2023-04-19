@@ -1,0 +1,26 @@
+div:hover {
+    text-shadow: 2px 2px 5px rgb(255, 110, 110) 
+}
+
+div.a {
+    text-align: center;
+    font-family: "궁서체", 굴림; 
+    font-size: 20pt;
+    background-color: lightgreen;
+    margin-bottom: 10px;
+}
+
+div.b {
+    text-align: center;
+    font-family: "궁서체", 굴림; 
+    font-size: 20pt;
+    background-color: #ffaeef;
+    margin-bottom: 10px;
+}
+
+div.c {
+    text-align: center;
+    font-family: "궁서체", 굴림; 
+    font-size: 20pt;
+    background-color: rgb(100, 38, 124);
+}

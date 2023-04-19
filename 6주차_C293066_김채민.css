@@ -1,0 +1,24 @@
+body { background-color:cornsilk ;}
+
+h1 { 
+    text-align: center;
+    font-family: "굴림", 굴림;    
+    font-size: 25pt;
+    color: green
+}
+
+p {
+    font-family: "궁서체", 굴림;    
+    font-size: 1.2em;
+    color:cornflowerblue
+}
+
+h3 {
+    text-shadow: 2px 2px 5px rgb(255, 110, 110)   
+}
+
+li {
+    background-color: #cce5ff;
+    color: darkblue;
+    margin: 5px;
+}
