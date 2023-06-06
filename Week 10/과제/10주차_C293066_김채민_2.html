@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 2</title>
+    <style>
+        body {
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h5>학번: C293066</h5>
+        <h5>이름: 김채민</h5>
+        <h5>학과: 캠퍼스 자율전공</h5>
+        <hr />
+        <h1>팩토리얼 계산기</h1>
+        <label for="number">정수를 입력하시오:</label>
+        <input type="number" id="number" min="0"><br><br>
+        <button onclick="calculateFactorial()">팩토리얼 계산</button>
+        <div id="result"></div>
+      
+        <script>
+          function calculateFactorial() {
+            var numberInput = document.getElementById('number');
+            var number = parseInt(numberInput.value);
+      
+            if (isNaN(number) || number < 0) {
+              alert('유효한 숫자를 입력하세요.');
+              return;
+            }
+      
+            var factorial = 1;
+            for (var i = 1; i <= number; i++) {
+              factorial *= i;
+            }
+      
+            var resultElement = document.getElementById('result');
+            resultElement.innerHTML = '<p>정수 ' + number + '의 팩토리얼: ' + factorial + '</p>';
+          }
+        </script>
+</body>
+</html>

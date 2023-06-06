@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+    <script>
+        function check(str) {
+          var lowerCaseStr = str.toLowerCase();
+          if (lowerCaseStr.includes("xxx")) {
+            return true;
+          }
+          return false;
+        }
+    
+        function displayResult() {
+          var inputString = document.getElementById("inputString").value;
+          var result = check(inputString);
+          document.getElementById("result").innerText = result ? "true" : "false";
+        }
+      </script>
+</head>
+<body>
+    <h5>학번: C293066</h5>
+    <h5>이름: 김채민</h5>
+    <h5>학과: 캠퍼스 자율전공</h5>
+    <hr />
+    <label for="inputString">문자열:</label>
+    <input type="text" id="inputString">
+    <button onclick="displayResult()">검사</button>
+    <p>결과: <span id="result"></span></p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동적 쇼핑 리스트</title>
+  
+  </style>
+</head>
+<body>
+  <h1>다음 번에 마트 가면 사와야 할 것 (동적 쇼핑 리스트)</h1>
+
+  <div>
+    <label for="item-input">항목을 입력하시오:</label>
+    <input type="text" id="item-input" />
+    <button onclick="addItem()">항목추가</button>
+  </div>
+
+  <ul id="item-list"></ul>
+
+  <script>
+    function addItem() {
+      var input = document.getElementById("item-input");
+      var item = input.value.trim();
+
+      if (item !== "") {
+        var itemList = document.getElementById("item-list");
+
+        var li = document.createElement("li");
+        li.textContent = item;
+
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "항목 삭제";
+        deleteButton.onclick = function() {
+          itemList.removeChild(li);
+        };
+
+        li.appendChild(deleteButton);
+        itemList.appendChild(li);
+
+        input.value = "";
+      }
+    }
+  </script>
+</body>
+</html>

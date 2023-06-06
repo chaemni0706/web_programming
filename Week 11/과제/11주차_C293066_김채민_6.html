@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+    <script>
+        function getCurrentMonthName() {
+          var months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+          ];
+    
+          var currentDate = new Date();
+          var currentMonthIndex = currentDate.getMonth();
+          var currentMonthName = months[currentMonthIndex];
+    
+          document.getElementById("currentMonth").innerText = "현재월: " + currentMonthName;
+        }
+      </script>
+</head>
+<body onload="getCurrentMonthName()">
+    <h5>학번: C293066</h5>
+    <h5>이름: 김채민</h5>
+    <h5>학과: 캠퍼스 자율전공</h5>
+    <hr />
+    <p id="currentMonth"></p>
+</body>
+</html>

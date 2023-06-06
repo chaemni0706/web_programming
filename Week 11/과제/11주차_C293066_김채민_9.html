@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+    <script>
+        function find(arr, value) {
+          for (var i = 0; i < arr.length; i++) {
+            if (arr[i] === value) {
+              return i;
+            }
+          }
+          return -1;
+        }
+    
+        function displayIndex() {
+          var arr = ["Hello", 10, 32.6, true];
+          var value = document.getElementById("searchValue").value;
+          var index = find(arr, value);
+    
+          var output = "인덱스: " + index;
+          document.getElementById("output").innerText = output;
+        }
+      </script>
+</head>
+<body>
+    <h5>학번: C293066</h5>
+    <h5>이름: 김채민</h5>
+    <h5>학과: 캠퍼스 자율전공</h5>
+    <hr />
+    <label for="searchValue">찾을 값:</label>
+    <input type="text" id="searchValue">
+    <button onclick="displayIndex()">인덱스 찾기</button>
+    <p id="output"></p>
+</body>
+</html>

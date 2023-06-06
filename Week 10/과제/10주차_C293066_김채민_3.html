@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 3</title>
+</head>
+<body>
+    <h5>학번: C293066</h5>
+        <h5>이름: 김채민</h5>
+        <h5>학과: 캠퍼스 자율전공</h5>
+        <hr />
+
+    <h2>프롬프트 연습</h2>
+    <button onclick="changeName()">이름 입력</button>
+    <p id="output">결과가 나옵니다</p>
+  
+    <script>
+      function changeName() {
+        var name = prompt("이름을 입력하세요:");
+  
+        if (name !== null) {
+          var outputElement = document.getElementById('output');
+          outputElement.textContent = (name + ' 안녕하세요');
+        }
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 매칭, 대체, 분할, 공백제거</title>
+</head>
+<body>
+    <script>
+        let str = 'Like father, like son.';
+        result = str.match(/like/ig);
+        document.write(result + '<br>');
+        
+        let p = 'The quick brown fox jumps over the lazy dog.<br>';
+        document.write(p.replace('dog', 'cat')+"<br>");
+        let regex = /Dog/i;
+        document.write(p.replace(regex, 'cat'))+"<br>";
+
+        let s = "One, Two, Three, Four, Five";
+        array = s. split(',');
+        for(i=0; i<array.length; i++) {
+            document.write('<br>' + i + '-' + array[i] + '<br>');
+        }
+
+        let g = "   Hello World!   ";
+        g = g.trim();
+        document.write('<br>' + g);
+    </script>
+</body>
+</html>

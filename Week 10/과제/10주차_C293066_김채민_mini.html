@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> mi</title>
+</head>
+<body>
+    <h5>학번: C293066</h5>
+        <h5>이름: 김채민</h5>
+        <h5>학과: 캠퍼스 자율전공</h5>
+        <hr />
+        <div id="number_game_position">
+            <h2>숫자 맞추기 게임</h2>
+            <p>이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100 사이에 있습니다.</p>
+            <form>
+                <p>숫자 : <input type="text" id="user" size="5"> <input type="button" id="btn" value="확인"
+                        onclick="guess()"></p>
+                <p>추측횟수 : <input type="text" id="guesses" size="30"></p>
+                <p>힌트 : <input type="text" id="result" size="20"></p>
+            </form>
+            <div id="area"></div>
+        </div>
+
+        <script>
+            var ran;
+            var count;
+    
+            function guess() {
+                var num1 = document.getElementById("user").value;
+                if (num1 === "") {
+                    alert('숫자를 입력하세요');
+                }
+                else if (parseInt(num1) === ran) {
+                    var area = document.getElementById("area");
+                    area.innerHTML = "정답입니다! " + count + "번만에 맞추셨습니다.";
+                    document.getElementById("btn").disabled = true;
+                }
+                else {
+                    if (ran > num1) {
+                        document.getElementById("result").value = "더 높습니다.";
+                    }
+                    else {
+                        document.getElementById("result").value = "더 낮습니다.";
+                    }
+                    count++;
+                    document.getElementById("guesses").textContent = count;
+                }
+            }
+    
+            function gameReset() {
+                ran = Math.floor(Math.random() * 100 + 1);
+                count = 0;
+                document.getElementById("area").innerHTML = "";
+                document.getElementById("result").value = "";
+                document.getElementById("guesses").textContent = count;
+                document.getElementById("user").value = "";
+                document.getElementById("btn").disabled = false;
+            }
+    
+            window.onload = function () {
+                document.getElementById("resetbtn").addEventListener('click', function () {
+                    gameReset();
+                });
+                gameReset();
+            }
+        </script>  
+</body>
+</html>

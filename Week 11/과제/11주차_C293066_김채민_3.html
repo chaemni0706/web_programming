@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <script>
+        function sumNumbers() {
+          var start = performance.now();
+    
+          var sum = 0;
+          for (var i = 0; i <= 1000000; i++) {
+            sum += i;
+          }
+    
+          var end = performance.now();
+          var executionTime = end - start;
+    
+          document.getElementById("executionTime").innerText = executionTime + "밀리초가 걸렸음";
+        }
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+          sumNumbers();
+        });
+    </script>
+</head>
+<body>
+    <h5>학번: C293066</h5>
+    <h5>이름: 김채민</h5>
+    <h5>학과: 캠퍼스 자율전공</h5>
+    <hr />
+    <p><span id="executionTime"></span></p>
+</body>
+</html>
